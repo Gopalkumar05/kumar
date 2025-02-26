@@ -30,7 +30,7 @@ const MemeGenerator = () => {
     
         try {
             console.log("📡 Sending request to backend...");
-            const response = await axios.post("https://kumar-8a6m.onrender.com/generate-meme", 
+            const response = await axios.post("/generate-meme", 
                 { topText, bottomText, templateId }, 
                 { headers: { "Content-Type": "application/json" } }
             );
