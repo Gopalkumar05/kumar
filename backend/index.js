@@ -6,7 +6,13 @@ import fetch from "node-fetch";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "*" }));
+// app.use(cors({ origin: "*" }));
+app.use(cors({
+    origin: ["http://localhost:5174", "https://kumar-8a6m.onrender.com"],
+    methods: "GET,POST",
+    allowedHeaders: "Content-Type"
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
